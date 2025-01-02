@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for dark theme */
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #1f1f1f;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+        .navbar-brand:hover {
+            color: #bb86fc;
+        }
+        .nav-link {
+            color: #e0e0e0;
+        }
+        .nav-link:hover {
+            color: #bb86fc;
+        }
+        section {
+            padding: 50px 0;
+        }
+        .hero {
+            background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .hero button {
+            background-color: #bb86fc;
+            border: none;
+            color: #121212;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .hero button:hover {
+            background-color: #9a67ea;
+        }
+        .about-section img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .skills-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .skills-section .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            width: 150px;
+        }
+        .skills-section .skill img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        footer {
+            background-color: #1f1f1f;
+            color: #e0e0e0;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #bb86fc;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#home">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Crafting innovative and responsive web solutions with passion.</p>
+            <button onclick="location.href='#contact'">Get in Touch</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/500x500" alt="About Me">
+                </div>
+                <div class="col-md-6">
+                    <p>Hello! I am a passionate developer who loves creating responsive and user-friendly websites. With a strong foundation in web technologies, I aim to deliver innovative solutions that meet client needs. Whether it's designing a sleek interface or building a robust backend, I thrive on bringing ideas to life.</p>
+                    <p>In my free time, I enjoy exploring new technologies, solving coding challenges, and contributing to open-source projects. Let's connect and create something amazing together!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-dark text-white">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-section">
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/html5.svg" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/css3.svg" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/javascript.svg" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/bootstrap.svg" alt="Bootstrap">
+                    <p>Bootstrap</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Your message"></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2025 My Portfolio. All rights reserved. <a href="#home">Back to top</a></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
